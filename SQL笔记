@@ -17,3 +17,7 @@ TEXT长文本数据;MEDIUMBLOB二进制形式的中等长度文本数据;MEDIUMT
 LONGTEXT极大文本数据
 DDL-表操作-日期类型：
 DATE日起值;TIME时间值或持续时间;YEAR年份值;DATETIME混合日期和时间值;TIMESTAMP混合日期和时间值，时间戳
+DDL-表操作-修改
+添加：ALTER TABLE 表名 ADD 字段名 类型(长度) [COMMENT注释] [约束];
+修改数据类型：ALTER TABLE 表名 MODIFY 字段名 新数据类型(长度);
+修改字段名和字段类型：ALTER TABLE 表名 CHANGE 旧字段名 新字段名 类型(长度) COMMENT'注释';
