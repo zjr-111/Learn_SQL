@@ -33,3 +33,9 @@ DDL-表操作-修改
 DDL-表操作-删除
 删除表：DROP TABLE[IF EXISTS] 表名;
 删除指定表，并重新创建该表：TRUNCATE TABLE 表名;
+
+DML-添加数据
+给指定字段添加数据：INSERT INTO 表名(字段1,字段2,...) VALUES(值1,值2,...);
+给全部字段添加数据：INSERT INTO 表名 VALUES(值1,值2,...);
+批量添加数据：INSERT INTO 表名(字段名1,字段名2,...) VALUES(值1,值2,...),(值1,值2,...),(值1,值2,...);
+              INSERT INTO 表名 VALUES(值1,值2,...),(值1,值2,...),(值1,值2,...);
