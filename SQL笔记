@@ -54,3 +54,12 @@ SELECT * FROM 表名;
 SELECT 字段1 [AS 别名1], 字段2 [AS 别名2] ... FROM 表名;
 3.去除重复记录
 SELECT DISTINCT 字段列表 FROM 表名;
+
+DQL-条件查询
+SELECT 字段列表 FROM 表名 WHERE 条件列表;  # >,>=,<,<=,= ,and,or,not就不写了
+比较运算符                  功能
+<>或!=                     不等于
+BETWEEN...AND...          在某个范围之内
+IN(...)                  再in之后的列表中的值，多选一
+LIKE 占位符            模糊匹配(_匹配单个字符，%匹配任意个字符)
+IS NULL                是NULL
