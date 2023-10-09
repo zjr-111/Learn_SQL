@@ -105,4 +105,20 @@ SELECT gender, AVG(age) FROM emp GROUP BY gender;
 # 30 查询年龄小于45的员工，并根据工作地址分组，获取员工数量大于等于3的工作地址
 SELECT workaddress, COUNT(*) change_name FROM emp WHERE age < 45 GROUP BY workaddress HAVING change_name >= 3;
 
+# 31 根据年龄对公司的员工进行升序排序
+SELECT * FROM emp ORDER BY age ASC;
+
+# 32 根据入职时间，对员工进行降序排序
+SELECT * FROM emp ORDER BY entrydate DESC;
+
+# 33 根据年龄对公司的员工进行升序排序，年龄相同，再按照入职时间进行降序排序
+SELECT * FROM emp ORDER BY age , entrydate DESC;
+
+# 34、35 查询第1页员工数据,每页展示10条记录
+SELECT * FROM emp LIMIT 0,10;
+SELECT * FROM emp LIMIT 10;
+
+# 36 查询第2页员工数据,每页展示10条记录
+SELECT * FROM emp LIMIT 10,10;
+
 drop table emp;
