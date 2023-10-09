@@ -63,3 +63,7 @@ BETWEEN...AND...          在某个范围之内
 IN(...)                  再in之后的列表中的值，多选一
 LIKE 占位符            模糊匹配(_匹配单个字符，%匹配任意个字符)
 IS NULL                是NULL
+
+DQL-聚合函数
+常见的 count统计函数 max最大值 min最小值 avg平均值 sum求和
+语法格式：SELECT 聚合函数(字段列表) FROM 表名;
