@@ -30,18 +30,54 @@ values (1, '1', '柳岩', '女', 20, '123456789012345678', '北京', '2000-01-01
        (16, '16', '赵支付', '女', 32, null, '北京', '2012-06-01');
 select * from emp;
 
-# 查询指定字段nam_，workno，age 返回
+# 2 查询指定字段nam_，workno，age 返回
 select name_, workno, age from emp;
 
-# 查询所有字段返回
+# 3、4 查询所有字段返回
 select id, workno, name_, gender, age, idcard, workaddress, entrydate from emp;
 select * from emp;
 
-# 查询所有员工工作地址，并起别名
+# 5、6 查询所有员工工作地址，并起别名
 select workaddress as '工作地址' from emp;
 select workaddress '工作地址' from emp;
 
-#查询公司员工的上班地址（不要重复）
+# 7 查询公司员工的上班地址（不要重复）
 select distinct workaddress from emp; 
+
+# 8 查询年龄等于18的员工
+SELECT * FROM emp WHERE age = 18;
+
+# 9 查询年龄小于20的员工信息
+SELECT * FROM emp WHERE age < 20;
+
+# 10 年龄小于等于20的员工信息
+SELECT * FROM emp WHERE age <= 20;
+
+# 11 查询没有身份证的员工信息
+SELECT * FROM emp WHERE idcard IS NULL;
+
+# 12 查询有身份证的员工信息
+SELECT * FROM emp WHERE idcard IS NOT NULL;
+
+# 13 查询年龄不等于20的员工信息
+SELECT * FROM emp WHERE age != 20;
+
+# 14、15 查询年龄在15(包含)到40(包含)之间的员工信息
+SELECT * FROM emp WHERE age >= 15 && age <= 40;
+SELECT * FROM emp WHERE age BETWEEN 15 AND 40;
+
+# 16 查询性别为女且年龄小于25的员工信息
+SELECT * FROM emp WHERE gender = '女' AND age < 25;
+
+# 17、18 查询年龄等于18或20或40的员工信息
+SELECT * FROM emp WHERE age=18 || age=20 || age=40;
+SELECT * FROM emp WHERE age in(18,20,40);
+
+# 19 查询姓名为两个字的员工信息
+SELECT * FROM emp WHERE name_ LIKE '__';
+
+# 20、21 查询身份证号最后一位是x的员工信息
+SELECT * FROM emp WHERE idcard LIKE '%X';
+SELECT * FROM emp WHERE idcard LIKE '_________________X';
 
 drop table emp;
