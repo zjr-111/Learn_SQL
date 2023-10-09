@@ -80,4 +80,29 @@ SELECT * FROM emp WHERE name_ LIKE '__';
 SELECT * FROM emp WHERE idcard LIKE '%X';
 SELECT * FROM emp WHERE idcard LIKE '_________________X';
 
+# 22、23 统计该企业员工数量
+SELECT COUNT(*) FROM emp;
+SELECT COUNT(id) FROM emp;
+
+# 24 统计该企业员工的平均年龄
+SELECT AVG(age) FROM emp;
+
+# 25 统计该企业员工的最大年龄
+SELECT MAX(age) FROM emp;
+
+# 26 统计该企业员工的最小年龄
+SELECT MIN(age) FROM emp;
+
+# 27 统计西安地区员工的年龄之和
+SELECT SUM(age) FROM emp WHERE workaddress = '西安';
+
+# 28 根据性别分组，统计男性员工 和 女性员工的数量
+SELECT gender, COUNT(*) FROM emp GROUP BY gender;
+
+# 29 根据性别分组，统计男性 和 女性员工的平均年龄
+SELECT gender, AVG(age) FROM emp GROUP BY gender;
+
+# 30 查询年龄小于45的员工，并根据工作地址分组，获取员工数量大于等于3的工作地址
+SELECT workaddress, COUNT(*) change_name FROM emp WHERE age < 45 GROUP BY workaddress HAVING change_name >= 3;
+
 drop table emp;
