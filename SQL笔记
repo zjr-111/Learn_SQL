@@ -76,3 +76,6 @@ DQL-分组查询
 DQL-排序查询
 格式:SELECT 字段列表 FROM 表名 ORDER BY 字段1 排序方式1,字段2 排序方式2;
 排序方式: ASC : 升序(默认)        DESC : 降序
+
+DQL-分页查询
+SELECT 字段列表 FORM 表名 LIMIT 起始索引,查询记录数;
