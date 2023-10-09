@@ -67,3 +67,8 @@ IS NULL                是NULL
 DQL-聚合函数
 常见的 count统计函数 max最大值 min最小值 avg平均值 sum求和
 语法格式：SELECT 聚合函数(字段列表) FROM 表名;
+
+DQL-分组查询
+格式:SELECT 字段列表 FROM 表名 [WHERE 条件] GROUP BY 分组字段名 [HAVING 分组后过滤条件];
+执行时机不同:where是分组之前进行过滤，不满足where条件，不参与分组；而having是分组之后对结果进行过滤。
+判断条件不同:where不能对聚合函数进行判断，而having可以。
