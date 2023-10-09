@@ -46,6 +46,22 @@ UPDATE 表名 SET 字段名1 = 值1, 字段名2=值2,...[WHERE 条件];
 DML-删除数据
 DELETE FROM 表名 [WHERE 条件]
 
+DQL 编写顺序                                            执行顺序
+                              SELECT                       4
+                                  字段列表
+                              FROM                         1
+                                  表名列表
+                              WHERE                        2
+                                  条件列表
+                              GROUP BY                     3
+                                  分组字段列表
+                              HAVING
+                                  分组后条件列表
+                              ORDER BY                     5
+                                  排序字段列表
+                              LIMIT                        6
+                                  分页参数
+
 DQL-基本查询
 1.查询多个字段
 SELECT 字段1，字段2，字段3，...FROM 表名;
@@ -79,3 +95,17 @@ DQL-排序查询
 
 DQL-分页查询
 SELECT 字段列表 FORM 表名 LIMIT 起始索引,查询记录数;
+
+DCL-用户管理
+# 查询用户
+USE mysql;
+select * from user;
+
+# 创建用户
+create user '用户名'@'主机名' identified by '密码';
+
+# 修改用户密码
+alter user '用户名'@'主机名' identified with mysql_native_password by '新密码';
+
+# 删除用户
+drop user '用户名'@'主机名';
