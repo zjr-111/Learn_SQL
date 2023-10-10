@@ -138,3 +138,10 @@ REVOKE 权限列表 ON 数据库名.表名 FROM '用户名'@'主机名';
                 TRIM(str)                   去掉字符串头部和尾部的空格
                 SUBSTRING(str,atart,len)    返回从字符串str从start位置起的len个长度的字符串
 SELECT 函数('参数');
+
+# 函数-数值
+常见的：         CEIL(x)                       向上取整
+                FLOOR(x)                      向下取整
+                MOD(X,Y)                      返回x/y的模(取余)
+                RAND()                        返回0~1内的随机数
+                ROUND(X,Y)                    求参数x的四舍五入的值，保留y位小数
