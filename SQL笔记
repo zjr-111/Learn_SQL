@@ -137,3 +137,4 @@ REVOKE 权限列表 ON 数据库名.表名 FROM '用户名'@'主机名';
                 RPAD(str,n,pad)             右填充，用字符串pad对str的右边进行填充，达到n个字符串长度
                 TRIM(str)                   去掉字符串头部和尾部的空格
                 SUBSTRING(str,atart,len)    返回从字符串str从start位置起的len个长度的字符串
+SELECT 函数('参数');
