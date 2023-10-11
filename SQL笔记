@@ -204,8 +204,17 @@ ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段) REFERE
 
 # 多表查询
 
-隐式内连接
+# 隐式内连接
 SELECT 字段列表 FROM 表1,表2 WHERE 条件...;
 
-显式内连接
+# 显式内连接
 SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 连接条件...;
+
+# 左外连接
+SELECT 字段列表 FROM 表1 LEFT [OUTER] JOIN 表2 ON 条件...;
+
+# 右外连接
+SELECT 字段列表 FROM 表1 RIGHT [OUTER] JOIN 表2 ON 条件...;
+
+# 自链接
+SELECT 字段列表 FROM 表A 别名A JOIN 表A 别名B ON 条件...;
