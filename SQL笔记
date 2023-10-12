@@ -230,3 +230,12 @@ union all 会将全部的数据合并在一起，union 会合并之后的数据�
 # 子查询
     SQL语句中嵌套SELECT语句
     SELECT * FROM t1 WHERE column1=(SELECT column1 FROM t2);
+
+# 列子查询
+    子查询返回的结果是一列(可以是多行),这种子查询成为列子查询
+    常用的操作符:  
+            IN                            在指定的范围之内，多选一
+            NOT IN                        不在指定的集合范围之内
+            ANY                           子查询返回列表中，有任意一个满足即可
+            SOME                          与ANY等同，使用SOME的地方都可以使用ANY
+            ALL                           子查询返回列表的所有值都必须满足
