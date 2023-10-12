@@ -218,3 +218,15 @@ SELECT 字段列表 FROM 表1 RIGHT [OUTER] JOIN 表2 ON 条件...;
 
 # 自链接
 SELECT 字段列表 FROM 表A 别名A JOIN 表A 别名B ON 条件...;
+
+# 联合查询 - union 、union all
+对于union查询，就是把多次查询的结果合并起来，形成一个新的查询结果集。列数和字段类型保持一致
+union all 会将全部的数据合并在一起，union 会合并之后的数据去重
+格式：
+    SELECT 字段列表 FROM 表A ...
+    UNION [ALL]
+    SELECT 字段列表 FROM 表B ...;
+
+# 子查询
+    SQL语句中嵌套SELECT语句
+    SELECT * FROM t1 WHERE column1=(SELECT column1 FROM t2);
